@@ -46,51 +46,37 @@ buttons.forEach(function (button) {
   });
 });
 
-// Добавляем обработчики событий для кнопок "Лайк" и "Дизлайк"
-document.querySelectorAll('.like, .dislike').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var place = this.parentNode.parentNode;
-    var likes = place.querySelector('.likes');
-    var dislikes = place.querySelector('.dislikes');
-    if (this.classList.contains('like')) {
-      likes.textContent = parseInt(likes.textContent) + 1;
-      addNews('Новый лайк для места: ' + place.querySelector('h2').textContent, likes.textContent);
-    } else if (this.classList.contains('dislike')) {
-      dislikes.textContent = parseInt(dislikes.textContent) + 1;
-      addNews('Новый дизлайк для места: ' + place.querySelector('h2').textContent, undefined, dislikes.textContent);
-    }
-    // Обработка лайков и дизлайков из новой формы
-    var newPlace = document.querySelector('.new-place');
-    var newPlaceName = newPlace.querySelector('#new-place-name').value;
-    var newLikes = newPlace.querySelector('.new-likes');
-    var newDislikes = newPlace.querySelector('.new-dislikes');
-    if (this.classList.contains('like')) {
-      newLikes.textContent = parseInt(newLikes.textContent) + 1;
-      addNews('Новый лайк для нового места: ' + newPlaceName, undefined, undefined, newLikes.textContent);
-    } else if (this.classList.contains('dislike')) {
-      newDislikes.textContent = parseInt(newDislikes.textContent) + 1;
-      addNews('Новый дизлайк для нового места: ' + newPlaceName, undefined, undefined, undefined, newDislikes.textContent);
-    }
-  });
-});
-
-function addNews(text, likes, dislikes, newLikes, newDislikes) {
-  var news = document.createElement('div');
-  news.textContent = text;
-  if (likes !== undefined) {
-    news.textContent += ' (Лайки: ' + likes + ')';
-  }
-  if (dislikes !== undefined) {
-    news.textContent += ' (Дизлайки: ' + dislikes + ')';
-  }
-  if (newLikes !== undefined) {
-    news.textContent += ' (Новые лайки для места ' + newPlaceName + ': ' + newLikes + ')';
-  }
-  if (newDislikes !== undefined) {
-    news.textContent += ' (Новые дизлайки для места ' + newPlaceName + ': ' + newDislikes + ')';
-  }
-  document.querySelector('.news').insertAdjacentElement('afterbegin', news);
+// Функция добавления новости в ленту новостей
+function addNews(placeName, description, likes, dislikes) {
+  var newsList = document.querySelector('.news-list');
+  var newsItem = document.createElement('li');
+  newsItem.innerHTML = '<h3>' + placeName + '</h3><p>' + description + '</p><p>Likes: ' + likes + '</p><p>Dislikes: ' + dislikes + '</p>';
+  newsList.appendChild(newsItem);
 }
+
+// Обработка лайков и дизлайков
+var likes = 0;
+var dislikes = 0;
+var likeBtn = document.querySelector('.like');
+var dislikeBtn = document.querySelector('.dislike');
+likeBtn.addEventListener('click', function() {
+  likes++;
+  var newPlace = document.querySelector('.new-place');
+  var newPlaceName = newPlace.querySelector('#new-place-name').value;
+  var newLikes = newPlace.querySelector('.new-likes');
+  var newDislikes = newPlace.querySelector('.new-dislikes');
+  newLikes.textContent = likes;
+  addNews('Новый лайк для нового места: ' + newPlaceName, undefined, likes, dislikes);
+});
+dislikeBtn.addEventListener('click', function() {
+  dislikes++;
+  var newPlace = document.querySelector('.new-place');
+  var newPlaceName = newPlace.querySelector('#new-place-name').value;
+  var newLikes = newPlace.querySelector('.new-likes');
+  var newDislikes = newPlace.querySelector('.new-dislikes');
+  newDislikes.textContent = dislikes;
+  addNews('Новый дизлайк для нового места: ' + newPlaceName, undefined, likes, dislikes);
+});
 // Получаем форму
 var form = document.querySelector('form');
 
