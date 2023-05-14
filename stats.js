@@ -33,8 +33,8 @@ function addNews(news) {
 var buttons = document.querySelectorAll('.actions button');
 
 // Добавляем обработчики событий для каждой кнопки
-buttons.forEach(function (button) {
-  button.addEventListener('click', function () {
+buttons.forEach(function(button) {
+  button.addEventListener('click', function() {
     var place = this.parentNode.parentNode;
     if (this.classList.contains('up')) {
       moveUp(place);
@@ -46,42 +46,39 @@ buttons.forEach(function (button) {
   });
 });
 
-// Функция добавления новости в ленту новостей
-function addNews(placeName, description, likes, dislikes) {
-  var newsList = document.querySelector('.news-list');
-  var newsItem = document.createElement('li');
-  newsItem.innerHTML = '<h3>' + placeName + '</h3><p>' + description + '</p><p>Likes: ' + likes + '</p><p>Dislikes: ' + dislikes + '</p>';
-  newsList.appendChild(newsItem);
+// Добавляем обработчики событий для кнопок "Лайк" и "Дизлайк"
+document.querySelectorAll('.like, .dislike').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var place = this.parentNode.parentNode;
+    var likes = place.querySelector('.likes');
+    var dislikes = place.querySelector('.dislikes');
+    if (this.classList.contains('like')) {
+      likes.textContent = parseInt(likes.textContent) + 1;
+      addNews('Новый лайк для места: ' + place.querySelector('h2').textContent, likes.textContent);
+    } else if (this.classList.contains('dislike')) {
+      dislikes.textContent = parseInt(dislikes.textContent) + 1;
+      addNews('Новый дизлайк для места: ' + place.querySelector('h2').textContent, undefined, dislikes.textContent);
+    }
+  });
+});
+
+function addNews(text, likes, dislikes) {
+  var news = document.createElement('div');
+  news.textContent = text;
+  if (likes !== undefined) {
+    news.textContent += ' (Лайки: ' + likes + ')';
+  }
+  if (dislikes !== undefined) {
+    news.textContent += ' (Дизлайки: ' + dislikes + ')';
+  }
+  document.querySelector('.news').insertAdjacentElement('afterbegin', news);
 }
 
-// Обработка лайков и дизлайков
-var likes = 0;
-var dislikes = 0;
-var likeBtn = document.querySelector('.like');
-var dislikeBtn = document.querySelector('.dislike');
-likeBtn.addEventListener('click', function() {
-  likes++;
-  var newPlace = document.querySelector('.new-place');
-  var newPlaceName = newPlace.querySelector('#new-place-name').value;
-  var newLikes = newPlace.querySelector('.new-likes');
-  var newDislikes = newPlace.querySelector('.new-dislikes');
-  newLikes.textContent = likes;
-  addNews('Новый лайк для нового места: ' + newPlaceName, undefined, likes, dislikes);
-});
-dislikeBtn.addEventListener('click', function() {
-  dislikes++;
-  var newPlace = document.querySelector('.new-place');
-  var newPlaceName = newPlace.querySelector('#new-place-name').value;
-  var newLikes = newPlace.querySelector('.new-likes');
-  var newDislikes = newPlace.querySelector('.new-dislikes');
-  newDislikes.textContent = dislikes;
-  addNews('Новый дизлайк для нового места: ' + newPlaceName, undefined, likes, dislikes);
-});
 // Получаем форму
 var form = document.querySelector('form');
 
 // Добавляем обработчик события отправки формы
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', function(event) {
   event.preventDefault();
   var name = document.getElementById('name').value;
   var image = document.getElementById('image').value;
@@ -111,11 +108,11 @@ form.addEventListener('submit', function (event) {
   addEventListenersToButtons();
 });
 
-// Добавляем обработчики событий для новых кнопок
-function addEventListenersToButtons() {
+  // Добавляем обработчики событий для новых кнопок
+  function addEventListenersToButtons() {
   var buttons = document.querySelectorAll('.places .place .actions button');
-  buttons.forEach(function (button) {
-    button.addEventListener('click', function () {
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
       var place = this.parentNode.parentNode;
       if (this.classList.contains('up')) {
         moveUp(place);
@@ -143,4 +140,3 @@ function addDislike(place) {
   var currentDislikes = parseInt(dislikesCount.textContent);
   dislikesCount.textContent = currentDislikes + 1;
 }
-
