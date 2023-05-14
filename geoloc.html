@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Мои любимые места</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Мои любимые места</h1>
+    <div class="container">
+        <div class="places">
+            <div class="place">
+                <img src="https://picsum.photos/id/237/400/300" alt="Место 1">
+                <h2>Место 1</h2>
+                <p>Краткая информация об этом месте.</p>
+                <p class="location">Геолокация: 55.7558° N, 37.6173° E</p>
+                <div class="actions">
+                    <button class="up">▲</button>
+                    <button class="down">▼</button>
+                    <button class="delete">Удалить</button>
+                    <button class="like">Лайк</button>
+                    <button class="dislike">Дизлайк</button>
+                </div>
+                <div class="likes">0</div>
+                <div class="dislikes">0</div>
+            </div>
+            <div class="place">
+                <img src="https://picsum.photos/id/238/400/300" alt="Место 2">
+                <h2>Место 2</h2>
+                <p>Краткая информация об этом месте.</p>
+                <p class="location">Геолокация: 51.5074° N, 0.1278° W</p>
+                <div class="actions">
+                    <button class="up">▲</button>
+                    <button class="down">▼</button>
+                    <button class="delete">Удалить</button>
+                    <button class="like">Лайк</button>
+                    <button class="dislike">Дизлайк</button>
+                </div>
+                <div class="likes">0</div>
+                <div class="dislikes">0</div>
+            </div>
+            <div class="place">
+                <img src="https://picsum.photos/id/239/400/300" alt="Место 3">
+                <h2>Место 3</h2>
+                <p>Краткая информация об этом месте.</p>
+                <p class="location">Геолокация: 40.7128° N, 74.0060° W</p>
+                <div class="actions">
+                    <button class="up">▲</button>
+                    <button class="down">▼</button>
+                    <button class="delete">Удалить</button>
+                    <button class="like">Лайк</button>
+                    <button class="dislike">Дизлайк</button>
+                </div>
+                <div class="likes">0</div>
+                <div class="dislikes">0</div>
+            </div>
+        </div>
+        <div class="news">
+            <p>Добавлено новое место: Место 4</p>
+            <p class="like">Место 1 нравится 10 людям</p>
+            <p class="dislike">Место 2 не нравится 5 людям</p>
+            <p>Место 3 было удалено</p>
+        </div>
+        <div class="form">
+            <h2>Добавить новое место</h2>
+            <form>
+                <label for="name">Название места:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="image">Ссылка на изображение:</label>
+                <input type="text" id="image" name="image" required>
+                <label for="description">Описание места:</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="location">Геолокация:</label>
+                <input type="text" id="location" name="location">
+                <button type="submit">Добавить</button>
+            </form>
+        </div>
+    </div>
+    <script src="stats.js">
+    </script>
+</body>
+
+</html>
