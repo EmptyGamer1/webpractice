@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+main {
+    margin: 20px;
+}
+
+#book-list {
+    margin-bottom: 40px;
+}
+
+#book-list h2 {
+    margin-top: 0;
+}
+
+#book-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#book-list li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+#book-list li h3 {
+    margin-top: 0;
+}
+
+#book-list li p {
+    margin-top: 0;
+}
+
+#book-list li a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#book-list li button {
+    margin-right: 10px;
+}
+
+#book-list li .rating {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#book-list li .like-count,
+#book-list li .dislike-count {
+    margin-right: 5px;
+}
+
+#add-book h2 {
+    margin-top: 0;
+}
+
+#add-book form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-book label {
+    margin-top: 10px;
+}
+
+#add-book input,
+#add-book textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#add-book button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#add-book button:hover {
+    background-color: #555;
+}
+
+.like-count {
+    color: green;
+}
+
+.dislike-count {
+    color: red;
+}
+
+.list-container {
+    text-align: center;
+}
+
+.horizontal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.horizontal-list li a {
+    color: #fff;
+}
+
+.horizontal-list li:last-child {
+    margin-right: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
