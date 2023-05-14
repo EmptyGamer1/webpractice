@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мои любимые книги</title>
+    <link rel="stylesheet" href="CSS/styles_b.css">
+</head>
+
+<body>
+    <header>
+        <h1>Мои любимые книги</h1>
+        <nav class="list-container">
+            <ul class="horizontal-list">
+                <li><a href="index.html">Моя страница</a></li>
+                <li><a href="geoloc.html">Мои любимые места</a></li>
+                <li><a href="books.html">Мои любимые книги</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="book-list">
+            <h2>Список книг</h2>
+            <ul>
+                <li>
+                    <h3>"Игра Эндера" Орсон Скотт Кард</h3>
+                    <p>"Игра Эндера" - научно-фантастический роман, повествующий о будущем,
+                        где Земля находится в постоянной войне с внеземными расами. Основной герой - Эндрю Уиггин,
+                        ребенок-гений, которого выбирают для участия в учебной программе, где он должен стать лидером в
+                        битве против вражеской расы.</p>
+                    <p>"Сила, которую имеет каждый человек, не ограничивается мерой его знаний или опыта. Она
+                        складывается из трех ключевых факторов: гениальности, целеустремленности и необходимости."</p>
+                    <a href="https://www.litres.ru/book/orson-skott-kard/igra-endera-122405/">Купить книгу "Игра
+                        Эндера"</a>
+                    <button class="delete-button">Удалить книгу</button>
+                    <button class="move-up-button">Переместить вверх</button>
+                    <button class="move-down-button">Переместить вниз</button>
+                    <div class="rating">
+                        <button class="like-button">Лайк</button>
+                        <span class="like-count">0</span>
+                        <button class="dislike-button">Дизлайк</button>
+                        <span class="dislike-count">0</span>
+                    </div>
+                </li>
+                <li>
+                    <h3>"Плоский мир" Терри Пратчетт</h3>
+                    <p>"Плоский мир" - юмористическая фантастика, которая рассказывает о фантастическом мире, где земля
+                        имеет форму плоского диска и лежит на спинах четырех слонов, стоящих на черепахе. Главный герой
+                        - Ринсвинд, маг-чародей, который путешествует по миру, пытаясь разобраться в таинственных
+                        событиях, происходящих вокруг него.</p>
+                    <p>"Твоя жизнь - это только твоя жизнь. Ты можешь рисовать на ней что угодно. И если нарисовал
+                        что-то не так, просто стирай и начинай заново."</p>
+                    <a href="https://www.litres.ru/serii-knig/ploskiy-mir/elektronnie-knigi/">Купить книгу "Плоский
+                        мир"</a>
+                    <button class="delete-button">Удалить книгу</button>
+                    <button class="move-up-button">Переместить вверх</button>
+                    <button class="move-down-button">Переместить вниз</button>
+                    <div class="rating">
+                        <button class="like-button">Лайк</button>
+                        <span class="like-count">0</span>
+                        <button class="dislike-button">Дизлайк</button>
+                        <span class="dislike-count">0</span>
+                    </div>
+                </li>
+                <li>
+                    <h3>"Солярис" Станислав Лем</h3>
+                    <p>"Солярис" - научно-фантастический роман, который рассказывает о экспедиции на планету Солярис,
+                        где орбитирует огромный океан, обладающий сознанием и способностью материализовать человеческие
+                        мысли. Основной герой - Келвин, психолог, который отправляется на планету, чтобы исследовать
+                        таинственные явления, происходящие на Солярисе.</p>
+                    <p>"Любой истинный знакомый нам объект является частью вселенной, и именно эта его принадлежность
+                        определяет его смысл. Чем меньше человек знает обо вселенной, тем слабее его понимание того, что
+                        происходит вокруг него."</p>
+                    <a href="https://www.litres.ru/book/stanislav-lem/solyaris-131925/">Купить книгу "Солярис"</a>
+                    <button class="delete-button">Удалить книгу</button>
+                    <button class="move-up-button">Переместить вверх</button>
+                    <button class="move-down-button">Переместить вниз</button>
+                    <div class="rating">
+                        <button class="like-button">Лайк</button>
+                        <span class="like-count">0</span>
+                        <button class="dislike-button">Дизлайк</button>
+                        <span class="dislike-count">0</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="add-book">
+            <h2>Добавить книгу</h2>
+            <form>
+                <label for="book-title">Название книги:</label>
+                <input type="text" id="book-title" name="book-title">
+                <label for="book-summary">Краткая аннотация:</label>
+                <textarea id="book-summary" name="book-summary"></textarea>
+                <label for="book-quote">Цитата из книги:</label>
+                <textarea id="book-quote" name="book-quote"></textarea>
+                <label for="book-link">Ссылка на книгу в интернет-магазине:</label>
+                <input type="text" id="book-link" name="book-link">
+                <button type="submit">Добавить книгу</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Мои любимые книги</p>
+    </footer>
+    <script src="JS/script_b.js"></script>
+</body>
+
+</html>

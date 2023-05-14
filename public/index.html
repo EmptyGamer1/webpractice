@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Моя страница</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Моя страница</h1>
+    <nav class="list-container">
+      <ul class="horizontal-list">
+        <li><a href="index.html">Моя страница</a></li>
+        <li><a href="geoloc.html">Мои любимые места</a></li>
+        <li><a href="books.html">Мои любимые книги</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <img src="JPG/my_photo.jpg" alt="Мое фото">
+    <p>Привет, меня зовут Владимир и я начинающий Frontend разработчик. На этой странице собрано немного информации обо
+      мне.</p>
+  </div>
+  <div>
+    <h2>Мои увлечения и хобби</h2>
+    <ul>
+      <li>Программирование</li>
+      <li>Создание веб-страниц</li>
+      <li>Разработка игр</li>
+      <li>Чтение книг</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Мои друзья</h2>
+    <ul>
+      <li><a href="friend1.html">Друг 1</a></li>
+      <li><a href="friend2.html">Друг 2</a></li>
+      <li><a href="friend3.html">Друг 3</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2>Новости</h2>
+    <ul>
+      <li>1 января 2023 - Я создал свою первую веб-страницу</li>
+      <li>15 января 2023 - Я начал изучать JavaScript</li>
+      <li>1 февраля 2023 - Я создал свой первый скрипт на JavaScript</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Отзывы</h2>
+    <button id="like-button">Нравится</button>
+    <span id="like-count">0</span>
+    <button id="dislike-button">Не нравится</button>
+    <span id="dislike-count">0</span>
+  </div>
+  <div>
+    <form id="comment-form">
+      <textarea id="comment-input"></textarea>
+      <button id="comment-button">Оставить комментарий</button>
+    </form>
+  </div>
+  <ul id="comment-list">
+  </ul>
+  <script src="JS/script.js">
+  </script>
+</body>
+<footer>
+  <section class="contacts">
+    <p>Телефон: 8-977-327-78-07</p>
+    <p>Email: emptygamer16@gmail.com</p>
+    <p>© 2023 Моя страница</p>
+  </section>
+</footer>
+
+</html>

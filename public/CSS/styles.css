@@ -1,0 +1,163 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+main {
+  margin: 20px;
+}
+
+h2,
+h3 {
+  color: #333;
+  font-weight: bold;
+  margin: 20px 5px 10px;
+}
+
+img {
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  max-width: 200px;
+}
+
+p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.contacts p {
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 10px 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#news-list {
+  margin: 0;
+  padding: 0;
+}
+
+#news-list li {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+#comments-list {
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment .author {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.comment .date {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+}
+
+.list-container {
+  text-align: center;
+}
+
+.horizontal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-list li {
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.horizontal-list li a {
+  color: #fff;
+}
+
+.horizontal-list li:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
